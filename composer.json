@@ -1,5 +1,5 @@
 {
-  "name": "avans/avans-oauth-php",
+  "name": "avans/oauth-php",
   "description": "PHP Connector to the Avans Oauth public API",
   "minimum-stability": "stable",
   "license": "MIT",
