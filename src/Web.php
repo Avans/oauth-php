@@ -58,10 +58,13 @@ class Web extends \League\OAuth1\Client\Server\Server {
     {
         $user = new User();
         $user->uid = $data['id'];
+        $user->email = $data['emails'][0];
         $user->nickname = $data['nickname'];
         $user->name = $data['accounts']['username'];
         $user->firstName = $data['name']['givenName'];
         $user->lastName = $data['name']['familyName'];
+        $user->location = $data['location'];
+        $user->extra['student'] = $data['student'] === 'true';
         $user->extra['employee'] = $data['employee'] === 'true';
         return $user;
     }
